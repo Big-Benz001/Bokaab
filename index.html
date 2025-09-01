@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bokaab Ventures</title>
+  <link rel="icon" type="image/png" href="IMG-20250421-WA0066.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #0077b6;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      box-sizing: border-box;
+    }
+    nav img {
+      width: 120px;
+      height: auto;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    nav ul li {
+      margin-left: 40px;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #023e8a;
+      transition: 0.2s;
+    }
+
+    /* Hero */
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+    }
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .image-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, #012d44cc, #012d44cc 70%);
+      z-index: 1;
+    }
+    .image-container p {
+      position: relative;
+      color: white;
+      z-index: 2;
+      text-align: center;
+      margin: 0;
+    }
+    #P1 {
+      padding-top: 200px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    #P2 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* About Us */
+    .about-us {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about-us h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+    .about-us p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+
+    /* Products */
+    .products {
+      padding: 60px 20px;
+      background: #f8f9fa;
+      text-align: center;
+    }
+    .products h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #0077b6;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 18px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+      .product:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      
+      border-radius: 10px;
+    }
+    .product h4 {
+      margin: 15px 0 10px;
+      color: #023e8a;
+    }
+    .product p {
+      font-size: 14px;
+      color: #555;
+      min-height: 50px;
+    }
+    .product button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .view-more {
+      margin-top: 30px;
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .product button:hover {
+      background: #023e8a;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .contact h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+    .contact p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .contact a:hover {
+      background: #023e8a;
+    }
+
+    /* Footer */
+    footer {
+      background: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#"><img src="IMG-20250421-WA0066-removebg-preview.png" alt="Bokaab Logo" /></a>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="image-container">
+    <img src="e27ad9d7-b3a2-4e70-add0-dcb9c132a73f.jpeg" alt="background image" />
+    <p id="P1">ALWAYS FRESH AND ALWAYS AVAILABLE</p>
+    <p id="P2">Quality Frozen Foods Sold and Delivered With Care</p>
+  </div>
+
+  <!-- About Us -->
+  <div class="about-us" id="about">
+    <h1>About Us</h1>
+    <p>
+      At Bokaab Ventures, we pride ourselves on being more than just a frozen food supplier —
+      we are your trusted partner in quality and convenience. Our products are carefully sourced
+      from reputable suppliers who share our commitment to freshness, hygiene, and sustainability.
+      Whether it’s fish, seafood, poultry, or other frozen essentials, we ensure that every item is
+      processed, stored, and delivered under the highest standards of food safety. With a focus on
+      reliability and excellence, we strive to bring you products that not only meet expectations
+      but exceed them. Our mission is simple: to make premium frozen foods accessible to homes,
+      restaurants, and businesses — delivered with the assurance of taste, nutrition, and value.
+    </p>
+  </div>
+
+  <!-- Products -->
+  <div class="products" id="products">
+    <h1>Our Products</h1>
+    <div class="product-grid">
+      <div class="product">
+        <img src="download.jpeg" alt="Tilapia">
+        <h4>Tilapia</h4>
+        <p>Delicious and nutritious tilapia fillets, perfect for any meal.</p>
+        <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+      <div class="product">
+        <img src="Turkey.jpeg" alt="Turkey">
+        <h4>Turkey</h4>
+        <p>Rich in flavor, our turkey is a healthy choice for any meal.</p>
+         <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+      <div class="product">
+        <img src="Chickenlaps.jpeg" alt="Chicken Laps">
+        <h4>Chicken Laps</h4>
+        <p>Succulent chicken laps, great for grills, curries, and party dishes.</p>
+        <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+       <div class="product">
+        <img src="orobo.jpeg" alt="Orobo">
+        <h4>Orobo</h4>
+        <p>Succulent orobo, great for grills, curries, and party dishes.</p>
+        <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+       <div class="product">
+        <img src="wings.jpeg" alt="Chicken Wings">
+        <h4>Chicken Wings</h4>
+        <p>Succulent chicken wings, great for grills, curries, and party dishes.</p>
+        <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+      <div class="product">
+        <img src="fullchicken.jpeg" alt="Chicken">
+        <h4>Full Chicken</h4>
+        <p>Tender and hygienically packed chicken for every recipe.</p>
+        <a href="https://wa.me/2347039895921" target="_blank"> <button>Order via WhatsApp</button></a>
+      </div>
+    </div>
+    <button class="view-more" onclick="window.location.href='product.html'">View More Products</button>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact" id="contact">
+    <h1>Contact Us</h1>
+    <p>We’re just a message away. Reach out to us via WhatsApp or Email:</p>
+    <a href="https://wa.me/2347039895921" target="_blank">WhatsApp Us</a>
+    <a href="mailto:info@bokaabventures.com">Email Us</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bokaab Ventures. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
